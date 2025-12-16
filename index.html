@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>ШІ NPC у відеоіграх</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="ai-designer.html">AI Designer</a>
+    <a href="ai-methods.html">Методи AI</a>
+    <a href="examples.html">Приклади</a>
+    <a href="sources.html">Джерела</a>
+    <a href="contacts.html">Контакти</a>
+</nav>
+
+<header class="hero fade-section">
+    <h1>Штучний інтелект NPC у відеоіграх</h1>
+    <p>Роль AI Designer, методи реалізації та приклади з сучасних ігор</p>
+</header>
+
+<section class="fade-section">
+    <h2>Про що цей сайт?</h2>
+    <p>
+        Даний вебсайт присвячений дослідженню штучного інтелекту
+        у неігрових персонажах (NPC) сучасних відеоігор.
+        Основна увага приділяється ролі <b>AI Designer</b>,
+        методам створення поведінки NPC та реальним прикладам з ігрової індустрії.
+    </p>
+</section>
+
+<section class="fade-section">
+    <h2>Основні розділи сайту</h2>
+    <ul>
+        <li><b>AI Designer</b> — хто це та які завдання він виконує</li>
+        <li><b>Методи AI</b> — інструменти створення поведінки NPC</li>
+        <li><b>Приклади</b> — реалізація AI NPC у відомих іграх</li>
+        <li><b>Джерела</b> — використані інформаційні матеріали</li>
+    </ul>
+</section>
+
+<section class="fade-section">
+    <h2>Чому тема AI NPC є важливою?</h2>
+    <p>
+        Якісний AI NPC безпосередньо впливає на занурення гравця у гру.
+        Розумна поведінка ворогів, союзників та мешканців ігрового світу
+        робить ігровий процес більш реалістичним, цікавим та непередбачуваним.
+    </p>
+</section>
+
+<section class="fade-section">
+    <h2>Мета проєкту</h2>
+    <p>
+        Метою даного проєкту є ознайомлення з принципами
+        проєктування AI NPC, методами їх реалізації та роллю AI Designer
+        у сучасній розробці відеоігор.
+    </p>
+</section>
+
+<footer class="fade-section">
+    <p></p>
+</footer>
+
+<script>
+    const sections = document.querySelectorAll('.fade-section');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>

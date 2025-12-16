@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Методи AI — інструменти AI Designer</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html">Головна</a>
+    <a href="ai-designer.html">AI Designer</a>
+    <a href="examples.html">Приклади</a>
+    <a href="sources.html">Джерела</a>
+    <a href="contacts.html">Контакти</a>
+</nav>
+
+<section class="fade-section">
+    <h2>Методи AI у відеоіграх</h2>
+    <p>
+        AI Designer використовує різні методи штучного інтелекту для створення
+        правдоподібної та збалансованої поведінки NPC. Кожен метод має власне
+        призначення та сферу застосування.
+    </p>
+</section>
+
+<section class="fade-section">
+    <h2>1. Pathfinding та навігація</h2>
+    <p>
+        Ці методи відповідають за пересування NPC у просторі. 
+        AI Designer визначає, як персонажі знаходять шлях до цілі та уникають перешкод.
+    </p>
+    <ul>
+        <li><b>A*</b> — оптимальний пошук шляху</li>
+        <li><b>Dijkstra</b> — аналіз доступних маршрутів</li>
+        <li><b>NavMesh</b> — навігаційна сітка рівня</li>
+    </ul>
+</section>
+
+<section class="fade-section">
+    <h2>2. FSM — кінцеві автомати</h2>
+    <p>
+        FSM (Finite State Machine) — базовий інструмент AI Designer.
+        NPC перемикається між станами залежно від подій у грі.
+    </p>
+    <ul>
+        <li>патрулювання</li>
+        <li>переслідування</li>
+        <li>атака</li>
+        <li>втеча</li>
+    </ul>
+</section>
+
+<section class="fade-section">
+    <h2>3. Behavior Trees</h2>
+    <p>
+        Behavior Trees дозволяють створювати складну ієрархію дій.
+        AI Designer комбінує перевірки умов та дії для досягнення реалістичної поведінки NPC.
+    </p>
+    <p>
+        Широко застосовуються у AAA-іграх та підтримуються Unreal Engine і Unity.
+    </p>
+</section>
+
+<section class="fade-section">
+    <h2>4. Utility AI</h2>
+    <p>
+        У Utility AI кожна дія оцінюється за корисністю.
+        NPC обирає варіант, який є найвигіднішим у поточній ситуації.
+    </p>
+    <p>
+        Дає більш «людську» та непередбачувану поведінку.
+    </p>
+</section>
+
+<section class="fade-section">
+    <h2>5. Машинне навчання</h2>
+    <p>
+        Машинне навчання дозволяє NPC адаптуватися до стилю гри гравця.
+        Використовується переважно у дослідницьких або експериментальних проєктах.
+    </p>
+    <ul>
+        <li>Reinforcement Learning</li>
+        <li>імітація поведінки гравця</li>
+    </ul>
+</section>
+
+<section class="fade-section">
+    <h2>Роль AI Designer у виборі методів</h2>
+    <p>
+        AI Designer вирішує, які методи використовувати,
+        виходячи з жанру гри, бюджету та бажаного рівня складності.
+        Часто комбінуються кілька підходів для досягнення найкращого результату.
+    </p>
+</section>
+
+<footer class="fade-section">
+    <p></p>
+</footer>
+
+<script>
+    const sections = document.querySelectorAll('.fade-section');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>

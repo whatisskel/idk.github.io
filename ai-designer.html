@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Designer — роль та завдання</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        html { scroll-behavior: smooth; }
+        .fade-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .fade-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar">
+    <a href="index.html">Головна</a>
+    <a href="ai-methods.html">Методи AI</a>
+    <a href="examples.html">Приклади</a>
+    <a href="sources.html">Джерела</a>
+    <a href="contacts.html">Контакти</a>
+</nav>
+
+<section class="fade-section">
+    <h2>Хто такий AI Designer?</h2>
+    <p>
+        <b>AI Designer</b> — це спеціаліст, який проєктує поведінку неігрових персонажів (NPC)
+        у відеоіграх. Його головне завдання — зробити NPC логічними, цікавими та переконливими
+        для гравця, не використовуючи «чесного» читерства.
+    </p>
+</section>
+
+<section class="fade-section">
+    <h2>Роль AI Designer у розробці ігор</h2>
+    <p>
+        AI Designer працює на перетині <b>геймдизайну</b>, <b>програмування</b> та <b>психології гравця</b>.
+        Він не просто пише логіку, а проєктує правила, за якими NPC приймають рішення.
+    </p>
+    <ul>
+        <li>створення поведінкових моделей NPC</li>
+        <li>баланс складності та «чесності» AI</li>
+        <li>налаштування реакцій на дії гравця</li>
+        <li>співпраця з програмістами та левел-дизайнерами</li>
+    </ul>
+</section>
+
+<section class="fade-section">
+    <h2>Основні інструменти AI Designer</h2>
+    <ul>
+        <li><b>FSM</b> — керування станами NPC</li>
+        <li><b>Behavior Trees</b> — складна ієрархічна логіка дій</li>
+        <li><b>Utility AI</b> — вибір найкращої дії за корисністю</li>
+        <li><b>NavMesh</b> — навігація та рух у просторі</li>
+        <li><b>Debug-інструменти</b> для аналізу поведінки NPC</li>
+    </ul>
+</section>
+
+<section class="fade-section">
+    <h2>Навички, необхідні AI Designer</h2>
+    <ul>
+        <li>розуміння геймдизайну та ігрових механік</li>
+        <li>логічне та системне мислення</li>
+        <li>базові знання програмування</li>
+        <li>аналіз поведінки гравця</li>
+        <li>робота з ігровими рушіями (Unity, Unreal Engine)</li>
+    </ul>
+</section>
+
+<section class="fade-section">
+    <h2>Чому AI Designer важливий?</h2>
+    <p>
+        Добре спроєктований AI робить гру живою: вороги здаються розумними,
+        союзники — корисними, а світ — правдоподібним.
+        Саме AI Designer відповідає за те, щоб гравець вірив у поведінку NPC.
+    </p>
+</section>
+
+<footer class="fade-section">
+    <p></p>
+</footer>
+
+<script>
+    const sections = document.querySelectorAll('.fade-section');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.2 });
+    sections.forEach(section => observer.observe(section));
+</script>
+
+</body>
+</html>
